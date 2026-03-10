@@ -1,0 +1,235 @@
+.dashboard-container {
+  text-align: center;
+  padding-top: 80px;
+}
+
+/* TITLE */
+
+.title {
+  font-size: 34px;
+  color: #333;
+}
+
+.tagline {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* CARD AREA */
+
+.card-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* CARD DESIGN */
+
+.card {
+  width: 220px;
+  height: 240px;
+  background: #f6f7ff; /* pastel instead of white */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.35s;
+  cursor: pointer;
+  border: 1px solid #eceeff;
+}
+
+/* Hover animation */
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+  background: #eef0ff;
+}
+
+.card img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+
+.card-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #7c83fd;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-btn:hover {
+  background: #96baff;
+}
+/* TRENDING SECTION */
+
+.trending-section {
+  margin-top: 80px;
+}
+
+.trending-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.trending-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.trending-card {
+  width: 160px;
+  background: #f6f7ff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.25s;
+  border: 1px solid #eceeff;
+}
+
+.trending-card:hover {
+  transform: translateY(-6px);
+}
+
+.trending-card .brand {
+  font-weight: bold;
+}
+
+.trending-card .discount {
+  color: #7c83fd;
+  font-size: 18px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding-top: 60px;
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .tagline {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .card-container {
+    margin-top: 40px;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 180px;
+    height: 200px;
+  }
+
+  .card img {
+    width: 60px;
+    margin-bottom: 15px;
+  }
+
+  .card-btn {
+    padding: 9px 18px;
+    font-size: 14px;
+  }
+
+  .trending-section {
+    margin-top: 60px;
+    padding: 0 15px;
+  }
+
+  .trending-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .trending-grid {
+    gap: 15px;
+  }
+
+  .trending-card {
+    width: 130px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding-top: 50px;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .tagline {
+    font-size: 13px;
+    margin-top: 6px;
+    color: #999;
+  }
+
+  .card-container {
+    margin-top: 30px;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 280px;
+    height: 160px;
+  }
+
+  .card img {
+    width: 50px;
+    margin-bottom: 12px;
+  }
+
+  .card-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+    border-radius: 20px;
+  }
+
+  .trending-section {
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+
+  .trending-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .trending-grid {
+    gap: 10px;
+  }
+
+  .trending-card {
+    width: 100px;
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .trending-card .discount {
+    font-size: 14px;
+  }
+}

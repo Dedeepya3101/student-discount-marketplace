@@ -1,0 +1,36 @@
+.sell-container{
+  padding:40px;
+  text-align:center;
+}
+
+.sell-title{
+  font-size:28px;
+  margin-bottom:25px;
+}
+
+.sell-form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  max-width:350px;
+  margin:auto;
+}
+
+.sell-form input{
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+
+.sell-form button{
+  padding:10px;
+  border:none;
+  border-radius:20px;
+  background:#7C83FD;
+  color:white;
+  cursor:pointer;
+}
+
+.sell-form button:hover{
+  background:#96BAFF;
+}

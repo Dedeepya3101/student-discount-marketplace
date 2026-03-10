@@ -1,0 +1,150 @@
+/* Step Progress Indicator */
+.step-progress-container {
+  width: 100%;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #f6f8ff 0%, #f0f4ff 100%);
+  border-bottom: 1px solid rgba(200, 180, 255, 0.3);
+  margin-bottom: 20px;
+}
+
+.step-progress {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.step-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.step-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e8d5ff;
+  border: 2px solid #d4a5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #7d5aff;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.step-circle.active {
+  background: linear-gradient(135deg, #c9a5ff 0%, #d4a5ff 100%);
+  border-color: #a870ff;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(122, 80, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.step-circle.current {
+  background: linear-gradient(135deg, #d4a5ff 0%, #c9a5ff 100%);
+  border-color: #7d5aff;
+  box-shadow: 0 0 0 4px rgba(122, 80, 255, 0.15);
+  animation: pulse-step 2s infinite;
+}
+
+.step-circle .checkmark {
+  animation: slideInScale 0.4s ease;
+}
+
+.step-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #7d5aff;
+  white-space: nowrap;
+  margin-top: 5px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.step-line {
+  width: 50px;
+  height: 3px;
+  background: #e8d5ff;
+  border-radius: 2px;
+  transition: background 0.4s ease;
+  margin: 0 5px;
+}
+
+.step-line.completed {
+  background: linear-gradient(90deg, #c9a5ff 0%, #d4a5ff 100%);
+  box-shadow: 0 2px 8px rgba(122, 80, 255, 0.15);
+}
+
+/* Animations */
+@keyframes pulse-step {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(122, 80, 255, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(122, 80, 255, 0.1);
+  }
+}
+
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .step-progress-container {
+    padding: 20px 10px;
+    margin-bottom: 15px;
+  }
+
+  .step-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .step-line {
+    width: 30px;
+  }
+
+  .step-label {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .step-progress {
+    gap: 5px;
+  }
+
+  .step-circle {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .step-line {
+    width: 15px;
+  }
+
+  .step-label {
+    font-size: 9px;
+    top: 120%;
+  }
+}

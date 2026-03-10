@@ -1,0 +1,494 @@
+/* NAVBAR CONTAINER */
+
+.navbar {
+  width: 100%;
+  height: 65px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* INNER NAVBAR */
+
+.navbar-inner {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+/* LOGO */
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #7c83fd;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  color: #96baff;
+  transform: scale(1.05);
+}
+
+/* BUTTON CONTAINER */
+
+.nav-buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* COMMON BUTTON STYLE */
+
+.nav-btn {
+  padding: 9px 22px;
+  border: none;
+  border-radius: 50px;
+  background: #7c83fd;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(124, 131, 253, 0.2);
+}
+
+/* LOGIN BUTTON HOVER */
+
+.nav-btn:hover {
+  background: #96baff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(124, 131, 253, 0.3);
+}
+
+/* REGISTER BUTTON */
+
+.register-btn {
+  background: linear-gradient(135deg, #ffb7b2, #ffa1a0);
+  box-shadow: 0 4px 12px rgba(255, 177, 178, 0.25);
+}
+
+.register-btn:hover {
+  background: linear-gradient(135deg, #ffa1a0, #ff8f8e);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 177, 178, 0.35);
+}
+
+/* LOGOUT BUTTON */
+
+.logout-btn {
+  background: linear-gradient(135deg, #ff7675, #ff5252);
+  box-shadow: 0 4px 12px rgba(255, 118, 117, 0.25);
+}
+
+.logout-btn:hover {
+  background: linear-gradient(135deg, #ff5252, #ff3838);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 118, 117, 0.35);
+}
+
+/* USER INFO */
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #2d3436;
+  font-weight: 500;
+}
+
+/* WALLET SECTION */
+
+.wallet-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.wallet-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #a29bfe 0%, #dfe6e9 100%);
+  border: none;
+  border-radius: 50px;
+  color: #2d3436;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(124, 131, 253, 0.15);
+}
+
+.wallet-btn:hover {
+  background: linear-gradient(135deg, #96baff 0%, #dfe6e9 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(124, 131, 253, 0.25);
+}
+
+.wallet-icon {
+  font-size: 16px;
+}
+
+.wallet-text {
+  font-weight: 700;
+  color: #7c83fd;
+}
+
+/* WALLET PANEL */
+
+.wallet-panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  mt-top: 12px;
+  width: 320px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  z-index: 200;
+  overflow: hidden;
+  animation: slideDownFade 0.25s ease;
+  margin-top: 12px;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, #f6f8ff 0%, #eef3ff 100%);
+  border-bottom: 1px solid #e0e6ff;
+}
+
+.panel-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2d3436;
+  margin: 0;
+}
+
+.panel-close {
+  width: 28px;
+  height: 28px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  color: #7c83fd;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.panel-close:hover {
+  background: #f0f0f0;
+  transform: scale(1.1);
+}
+
+.panel-content {
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* PANEL SECTIONS */
+
+.panel-section {
+  margin-bottom: 20px;
+}
+
+.panel-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-label {
+  font-size: 12px;
+  color: #7c83fd;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  display: block;
+}
+
+/* BALANCE DISPLAY */
+
+.balance-display {
+  background: linear-gradient(135deg, #f0f4ff 0%, #f8faff 100%);
+  padding: 16px;
+  border-radius: 10px;
+  border: 2px solid #e0e6ff;
+  text-align: center;
+}
+
+.balance-value {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  color: #7c83fd;
+  font-family: "Courier New", monospace;
+}
+
+/* PURCHASE DISPLAY */
+
+.purchase-display {
+  background: linear-gradient(135deg, #f0f8ff 0%, #f8fcff 100%);
+  padding: 16px;
+  border-radius: 10px;
+  border: 2px dashed #a5d6a7;
+  text-align: center;
+}
+
+.purchase-count {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.purchase-label {
+  display: block;
+  font-size: 12px;
+  color: #636e72;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* RECENT PURCHASES */
+
+.recent-purchases {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.purchase-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #f6f8ff;
+  border-radius: 8px;
+  border-left: 3px solid #7c83fd;
+  transition: all 0.25s ease;
+}
+
+.purchase-item:hover {
+  background: #f0f4ff;
+  transform: translateX(4px);
+}
+
+.purchase-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.purchase-brand {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2d3436;
+}
+
+.purchase-discount {
+  font-size: 12px;
+  color: #636e72;
+  font-weight: 500;
+}
+
+.purchase-price {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ff7675;
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+/* NO PURCHASES */
+
+.no-purchases {
+  background: linear-gradient(135deg, #f0f8ff 0%, #f8fcff 100%);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  border: 2px dashed #add8e6;
+}
+
+.no-purchases p {
+  font-size: 13px;
+  color: #636e72;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .navbar-inner {
+    padding: 0 15px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .nav-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+  }
+
+  .wallet-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    width: 100%;
+    max-width: none;
+    border-radius: 16px 16px 0 0;
+    max-height: 60vh;
+    animation: slideUpFade 0.25s ease;
+  }
+
+  @keyframes slideUpFade {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .purchase-item {
+    font-size: 12px;
+  }
+
+  .balance-value {
+    font-size: 24px;
+  }
+
+  .purchase-count {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 55px;
+  }
+
+  .navbar-inner {
+    padding: 0 10px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .user-name {
+    font-size: 12px;
+  }
+
+  .nav-buttons {
+    gap: 8px;
+  }
+
+  .nav-btn {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .wallet-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .wallet-icon {
+    font-size: 14px;
+  }
+
+  .wallet-text {
+    display: none;
+  }
+
+  .wallet-panel {
+    width: 100%;
+    max-width: 100%;
+    right: 0;
+    left: 0;
+    border-radius: 16px 16px 0 0;
+    max-height: 70vh;
+  }
+
+  .panel-content {
+    max-height: 50vh;
+  }
+
+  .balance-value {
+    font-size: 22px;
+  }
+
+  .purchase-count {
+    font-size: 24px;
+  }
+
+  .purchase-item {
+    font-size: 11px;
+  }
+
+  .navbar-subtitle {
+    font-size: 12px;
+    color: #636e72;
+  }
+}
+
+/* NAVBAR BRAND ONLY */
+
+.navbar-brand-only {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #636e72;
+}
+
+.navbar-subtitle {
+  font-size: 13px;
+  color: #636e72;
+  font-weight: 500;
+}
