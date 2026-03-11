@@ -17,7 +17,7 @@ import CouponDetails from "./pages/CouponDetails";
 import Payment from "./pages/Payment";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import MyCoupons from "./pages/MyCoupons";
-import Admin from "./pages/Admin";
+import AdminDashboard from "./pages/AdminDashboard";
 
 // Data
 import couponsData from "./data/coupons";
@@ -171,7 +171,7 @@ function App() {
           path="/admin"
           element={
             <AdminRoute>
-              <Admin showToast={showToast} />
+              <AdminDashboard />
             </AdminRoute>
           }
         />

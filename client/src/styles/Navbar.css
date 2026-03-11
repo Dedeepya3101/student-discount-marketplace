@@ -96,6 +96,19 @@
   box-shadow: 0 6px 18px rgba(255, 118, 117, 0.35);
 }
 
+/* ADMIN BUTTON */
+
+.admin-btn {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  box-shadow: 0 4px 12px rgba(9, 132, 227, 0.25);
+}
+
+.admin-btn:hover {
+  background: linear-gradient(135deg, #0984e3, #0770ca);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(9, 132, 227, 0.35);
+}
+
 /* USER INFO */
 
 .user-info {

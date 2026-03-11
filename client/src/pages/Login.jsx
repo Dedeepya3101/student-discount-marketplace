@@ -51,7 +51,7 @@ function Login({ setIsLoggedIn }) {
     const email = form.email.trim();
     const password = form.password;
 
-    if (email === "admin@couponcatch.com" && password === "Admin@123") {
+    if (email === "admin@couponcatch.com" && password === "admin123") {
       // Admin login
       const adminInfo = {
         id: "admin-1",

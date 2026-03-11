@@ -10,6 +10,7 @@ function Navbar({
 }) {
   const navigate = useNavigate();
   const [userName, setUserName] = useState("");
+  const [userRole, setUserRole] = useState("");
   const [showWalletPanel, setShowWalletPanel] = useState(false);
 
   useEffect(() => {
@@ -21,6 +22,10 @@ function Navbar({
       if (user?.email) {
         const name = user.email.split("@")[0];
         setUserName(name);
+      }
+
+      if (user?.role) {
+        setUserRole(user.role);
       }
     }
   }, [isLoggedIn]);
@@ -145,6 +150,15 @@ function Navbar({
                   </div>
                 )}
               </div>
+
+              {userRole === "admin" && (
+                <button
+                  className="nav-btn admin-btn"
+                  onClick={() => navigate("/admin")}
+                >
+                  🔧 Admin Panel
+                </button>
+              )}
 
               <button className="nav-btn logout-btn" onClick={handleLogout}>
                 Logout
