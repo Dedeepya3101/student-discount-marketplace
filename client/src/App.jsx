@@ -18,6 +18,10 @@ import Payment from "./pages/Payment";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import MyCoupons from "./pages/MyCoupons";
 import AdminDashboard from "./pages/AdminDashboard";
+import AdminUsers from "./pages/AdminUsers";
+import AdminCoupons from "./pages/AdminCoupons";
+import AdminReports from "./pages/AdminReports";
+import AdminDisputes from "./pages/AdminDisputes";
 
 // Data
 import couponsData from "./data/coupons";
@@ -172,6 +176,42 @@ function App() {
           element={
             <AdminRoute>
               <AdminDashboard />
+            </AdminRoute>
+          }
+        />
+
+        <Route
+          path="/admin/users"
+          element={
+            <AdminRoute>
+              <AdminUsers />
+            </AdminRoute>
+          }
+        />
+
+        <Route
+          path="/admin/coupons"
+          element={
+            <AdminRoute>
+              <AdminCoupons />
+            </AdminRoute>
+          }
+        />
+
+        <Route
+          path="/admin/reports"
+          element={
+            <AdminRoute>
+              <AdminReports />
+            </AdminRoute>
+          }
+        />
+
+        <Route
+          path="/admin/disputes"
+          element={
+            <AdminRoute>
+              <AdminDisputes />
             </AdminRoute>
           }
         />
